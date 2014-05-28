@@ -173,7 +173,7 @@ def setup_extra_options():
 
 setup(
     name = "lxml",
-    version = versioninfo.version(),
+    version = "3.4",
     author="lxml dev team",
     author_email="lxml-dev@lxml.de",
     maintainer="lxml dev team",
