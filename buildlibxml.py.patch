@@ -1,0 +1,20 @@
+--- ../lxml/buildlibxml.py	Tue May 27 12:50:48 2014
++++ ./buildlibxml.py	Tue May 27 14:37:05 2014
+@@ -24,7 +24,7 @@
+ # use pre-built libraries on Windows
+ 
+ def download_and_extract_zlatkovic_binaries(destdir):
+-    url = 'ftp://ftp.zlatkovic.com/pub/libxml/'
++    url = 'ftp://xmlsoft.org/libxml2/win32/'
+     libs = dict(
+         libxml2  = None,
+         libxslt  = None,
+@@ -34,7 +34,7 @@
+     for fn in ftp_listdir(url):
+         for libname in libs:
+             if fn.startswith(libname):
+-                assert libs[libname] is None, 'duplicate listings?'
++                #assert libs[libname] is None, 'duplicate listings?'
+                 assert fn.endswith('.win32.zip')
+                 libs[libname] = fn
+ 
